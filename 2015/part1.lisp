@@ -8,7 +8,7 @@
 ;; Solves part 0 of day 1. Done with the almighty loop macro which introdcues one local variable to count.
 ;; This function as it is assumes only '(' and ')' are present in the input, mainly because it is a PITA to write #\( with paredit active :P.
 (defun solve-0 (input)
-  (loop for c across input      ; loop over every character in input
+  (loop for c across input     ; loop over every character in input
 	with cnt = 0 do        ; local variable to count current position.
 	  (if (char= c #\()    ; check with char= for character equality
 	      (incf cnt)       ; increment count if '('
@@ -18,7 +18,7 @@
 ;; Solves part 1 of day 1. Also done with the loop macro, this time with conditional break and two local variables.
 ;; Also assumes for the same reasons as part 0 that '(' and ')' are the only characters in the input string.
 (defun solve-1 (input)
-  (loop for c across input       ; loop over every character in input  
+  (loop for c across input      ; loop over every character in input  
 	with cnt = 0            ; local variable to count current position
 	with lcnt = 0           ; local variable to count current symbol
 	until (< cnt 0) do      ; loop until we reach the basement (< 0)
