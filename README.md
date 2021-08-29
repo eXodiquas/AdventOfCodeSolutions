@@ -7,4 +7,4 @@ A collection of [Advent of Code (AoC)](https://adventofcode.com/) solutions (pro
 List of all the solutuions in this repository.
 
 ### 2015
-6/50
+8/50
